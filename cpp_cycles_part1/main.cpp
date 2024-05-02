@@ -2,11 +2,26 @@
 using namespace std;
 
 int main() {
-	int k; cout << "Enter a variant number:"; cin >> k;
-	int i = 1;
-	while (i <= 9) {
-		cout << k << " * " << i << " = " << k * i << endl;
-		i++;
+	char k; cout << "Enter a symbol:"; cin >> k;
+	int n; cout << "Enter an amount of symbols:"; cin >> n;
+	int axis; cout << "Horizontal(1) or Vertical(2)?"; cin >> axis;
+	if (axis == 1) {
+		while (n != 0) {
+			cout << k;
+			n--;
+		}
+		cout << endl;
+		return 0;
 	}
-	
+	else if (axis == 2) {
+		while (n != 0) {
+			cout << k << endl;
+			n--;
+		}
+		return 0;
+	}
+	else {
+		cout << "Wrong input" << endl;
+		return 0;
+	}
 }
